@@ -45,6 +45,6 @@ class PanelRow extends HTMLElement
       else 'red'
 
   openFile: (filePath) ->
-    atom.workspace.open(filePath, true)
+    atom.workspace.open(filePath, {searchAllPanes: true})
 
 module.exports = document.registerElement('coverage-table-row', prototype: PanelRow.prototype, extends: 'tr')
